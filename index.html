@@ -2,12 +2,61 @@
 <html lang="en">
 <head>
     <title>Perceptual-GS</title>
+    <style>
+        .video-container {
+          display: flex;
+          justify-content: space-around;
+          padding: 20px;
+        }
+        .video-item {
+          text-align: center;
+          width: 45%;
+        }
+        video {
+          width: 100%;
+          height: auto;
+          border: 1px solid #ccc;
+        }
+        .caption {
+          margin-top: 10px;
+          font-size: 16px;
+          color: #333;
+        }
+    </style>
 </head>
 <body>
     <h1 id="more-visualization-for-perceptual-gs">More Visualization for Perceptual-GS </h1>
-    <video width="100%" controls="">
-      <source src="bicycle_ours.mp4" type="video/mp4">
-    </video>
+
+    <div class="video-container">
+      <div class="video-item">
+        <video autoplay="" muted="" loop="" playsinline="">
+          <source src="3dgs_bicycle.mp4" type="video/mp4">
+        </video>
+        <div class="caption">3DGS</div>
+      </div>
+      <div class="video-item">
+        <video autoplay="" muted="" loop="" playsinline="">
+          <source src="ours_bicycle.mp4" type="video/mp4">
+        </video>
+        <div class="caption">Perceptual-GS</div>
+      </div>
+  </div>
+
+    <div class="video-container">
+        <div class="video-item">
+          <video autoplay="" muted="" loop="" playsinline="">
+            <source src="3dgs_flowers.mp4" type="video/mp4">
+          </video>
+          <div class="caption">3DGS</div>
+        </div>
+        <div class="video-item">
+          <video autoplay="" muted="" loop="" playsinline="">
+            <source src="ours_flowers.mp4" type="video/mp4">
+          </video>
+          <div class="caption">Perceptual-GS</div>
+        </div>
+    </div>
+    
     <figure style="text-align: center;">
         <img src="corgs_w_ours.png" width="100%">
         <figcaption>Figure 1. Qualitative comparison of our method combined with CoR-GS.</figcaption>
@@ -30,15 +79,19 @@
     </figure>
     <figure style="text-align: center;">
         <img src="rendered_depth.png" width="100%">
-        <figcaption>Figure 6. Visualization of rendered depth.</figcaption>
+        <figcaption>Figure 6. Visualization of rendered depth (Mini-Splatting).</figcaption>
     </figure>
     <figure style="text-align: center;">
+      <img src="depth_blending.png" width="100%">
+      <figcaption>Figure 7. Visualization of rendered depth (Alpha-Blending).</figcaption>
+  </figure>
+    <figure style="text-align: center;">
         <img src="render_sensitivity.png" width="100%">
-        <figcaption>Figure 7. Visualization of the rendered sensitivity map during training.</figcaption>
+        <figcaption>Figure 8. Visualization of the rendered sensitivity map during training.</figcaption>
     </figure>
     <figure style="text-align: center;">
         <img src="statistical_analysis.png" width="100%">
-        <figcaption>Figure 8. Hyperparameter setting based on statistical analysis.</figcaption>
+        <figcaption>Figure 9. Hyperparameter setting based on statistical analysis.</figcaption>
     </figure>
 </body>
 </html>
